@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { WordpressService } from './wordpress.service';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,8 @@ export class AppComponent {
   posts$: Observable<any[]>;
 
   constructor(private wp: WordpressService) {
-    this.posts$ = this.wp.getPosts();
+    this.posts$ = this.wp.getPosts().map(
+      (res: any) => res.posts
+    );
   }
 }
