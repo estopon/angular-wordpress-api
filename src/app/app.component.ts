@@ -10,10 +10,19 @@ import 'rxjs/add/operator/map';
 })
 export class AppComponent {
   posts$: Observable<any[]>;
+  searchResult = [];
 
   constructor(private wp: WordpressService) {
     this.posts$ = this.wp.getPosts().map(
       (res: any) => res.posts
     );
+    this.posts$.subscribe(res => {
+      this.searchResult = res;
+      let categories = [];
+      this.searchResult.forEach(p => {
+        console.log(p);
+        console.log(p.categories);
+      });
+    });
   }
 }
