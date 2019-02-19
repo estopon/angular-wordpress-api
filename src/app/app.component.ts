@@ -11,6 +11,7 @@ import 'rxjs/add/operator/map';
 export class AppComponent {
   posts$: Observable<any[]>;
   searchResult = [];
+  categories = [];
 
   constructor(private wp: WordpressService) {
     this.posts$ = this.wp.getPosts().map(
@@ -18,11 +19,12 @@ export class AppComponent {
     );
     this.posts$.subscribe(res => {
       this.searchResult = res;
-      let categories = [];
       this.searchResult.forEach(p => {
-        console.log(p);
-        console.log(p.categories);
+        if (this.categories.indexOf(Object.keys(p.categories)[0]) === -1) {
+          this.categories.push(Object.keys(p.categories)[0]);
+        }
       });
+      console.log(this.categories);
     });
   }
 }
