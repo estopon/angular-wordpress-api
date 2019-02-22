@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { WordpressService } from './wordpress.service';
+import { WordpressService } from './services/wordpress.service';
 import 'rxjs/add/operator/map';
 
 @Component({
