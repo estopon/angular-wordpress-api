@@ -1,18 +1,18 @@
-<mat-toolbar color="primary">
-  <span>Viajes Gala</span>
-</mat-toolbar>
-<div class="page-wrapper">
-  <div fxLayout="row wrap" fxLayoutGap="16px">
-    <mat-card fxFlex="calc(33% - 16px)" *ngFor="let post of posts$ | async">
-      <mat-card-header>
-        <mat-card-title>{{ post.title }}</mat-card-title>
-        <mat-card-subtitle>{{ post.date | date }}</mat-card-subtitle>
-      </mat-card-header>
-      <!--<img matCardImage [src]="post.post_thumbnail.URL">-->
-      <mat-card-content [innerHTML]="post.content"></mat-card-content>
-      <mat-card-actions align="start">
-        <a mat-button [href]="post.URL">Ver</a>
-      </mat-card-actions>
-    </mat-card>
+<main>
+  <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                  <li class="breadcrumb-item active">Categorías</li>
+              </ol>
+              <div class="jumbotron">
+                  <h1>Categorías</h1>
+                  <p>Esto una lista de las categorías disponibles, haz click en ellas para ver una lista de entradas de la categoría seleccionada.</p>
+              </div>
+              <router-outlet></router-outlet>
+          </div>
+          <router-outlet name="sidemenu"></router-outlet>
+      </div>
   </div>
-</div>
+</main>
