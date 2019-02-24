@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { WordpressService } from 'src/app/services/wordpress.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-posts-category',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsCategoryComponent implements OnInit {
 
-  constructor() { }
+  posts$: Observable<any[]>;
+
+  constructor(private wp: WordpressService, private route: ActivatedRoute) {
+    this.posts$ = this.wp.getPosts(this.route.snapshot.params['id']).map(
+      (res: any) => res.posts
+    );
+  }
 
   ngOnInit() {
   }

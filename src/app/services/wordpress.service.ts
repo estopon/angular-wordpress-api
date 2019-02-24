@@ -9,11 +9,12 @@ export class WordpressService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<any[]> {
-    return this.http.get<any[]>('https://public-api.wordpress.com/rest/v1.1/sites/viajesgala747870895.wordpress.com/posts/', {
-      params: {
-        per_page: '6'
-      }
-    });
+  getPosts(pCategory: String): Observable<any[]> {
+    return this.http.get<any[]>('https://public-api.wordpress.com/rest/v1.1/sites/viajesgala747870895.wordpress.com/posts?category=' + pCategory);
   }
+
+  getCategories(): Observable<any[]> {
+    return this.http.get<any[]>('https://public-api.wordpress.com/rest/v1.1/sites/viajesgala747870895.wordpress.com/categories/');
+  }
+
 }
