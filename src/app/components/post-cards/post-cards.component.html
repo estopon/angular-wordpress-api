@@ -2,6 +2,6 @@
     <div class="col-xs-6 col-lg-4" *ngFor="let category of categories$ | async">
         <h2>{{ category.name }}</h2>
         <p>{{ category.description }}</p>
-        <p><a class="btn btn-secondary" (click)="navigate(category.name)"  role="button">Ver Detalles »</a></p>
+        <p><a class="btn btn-secondary" (click)="navigate(category.name)" role="button">Ver Detalles »</a></p>
     </div>
 </div>

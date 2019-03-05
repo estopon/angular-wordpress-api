@@ -22,6 +22,9 @@ export class SideMenuComponent implements OnInit {
   }
 
   navigate(path) {
+    console.log(path);
+    console.log(this.router.url);
+    console.log(this.route);
     this.router.navigate([{outlets: {primary: path, sidemenu: path}}], {relativeTo: this.route});
   }
 

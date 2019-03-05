@@ -24,8 +24,8 @@ export const routerConfig: Routes = [
                 component: PostCardsComponent
             },
             {
-              path: ':id',
-              component: PostsCategoryComponent
+                path: ':id',
+                component: PostsCategoryComponent
             },
             {
                 path: '',
