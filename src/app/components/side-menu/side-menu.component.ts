@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { WordpressService } from 'src/app/services/wordpress.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { routerConfig } from 'src/app/router/router.config';
 
 @Component({
   selector: 'app-side-menu',
@@ -22,7 +23,14 @@ export class SideMenuComponent implements OnInit {
   }
 
   navigate(path) {
-    this.router.navigateByUrl('/categories/' + path);
+    this.router.navigate(['/', 'categories', path]).then(
+      nav => {
+        console.log(nav);
+      }, err => {
+        console.log(err);
+      }
+    );
+    // this.router.navigateByUrl('/categories/' + path, {replaceUrl: false, skipLocationChange: false});
     // this.router.navigate([{outlets: {primary: path, sidemenu: path}}], {relativeTo: this.route});
   }
 
