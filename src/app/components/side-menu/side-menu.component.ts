@@ -25,7 +25,7 @@ export class SideMenuComponent implements OnInit {
   navigate(path) {
     this.router.navigate(['/', 'categories', path]).then(
       nav => {
-        console.log(nav);
+        window.location.reload();
       }, err => {
         console.log(err);
       }
