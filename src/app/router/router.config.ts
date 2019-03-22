@@ -1,3 +1,4 @@
+import { ContactComponent } from './../components/contact/contact.component';
 import {Routes} from '@angular/router';
 import {HomeComponent} from '../components/home/home.component';
 import {AboutComponent} from '../components/about/about.component';
@@ -38,6 +39,10 @@ export const routerConfig: Routes = [
                 component: SideMenuComponent
             }
         ]
+    },
+    {
+        path: 'contact',
+        component: ContactComponent
     },
     {
         path: '',

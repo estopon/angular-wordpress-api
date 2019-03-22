@@ -14,6 +14,8 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { PostsCategoryComponent } from './components/posts-category/posts-category.component';
 import { RouterModule } from '@angular/router';
 import { routerConfig } from './router/router.config';
+import { ContactComponent } from './components/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { routerConfig } from './router/router.config';
     AboutComponent,
     PostCardsComponent,
     SideMenuComponent,
-    PostsCategoryComponent
+    PostsCategoryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { routerConfig } from './router/router.config';
     AppMaterialModule,
     FlexModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routerConfig)
   ],
   providers: [],

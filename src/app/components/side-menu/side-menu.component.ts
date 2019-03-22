@@ -30,8 +30,6 @@ export class SideMenuComponent implements OnInit {
         console.log(err);
       }
     );
-    // this.router.navigateByUrl('/categories/' + path, {replaceUrl: false, skipLocationChange: false});
-    // this.router.navigate([{outlets: {primary: path, sidemenu: path}}], {relativeTo: this.route});
   }
 
 }
