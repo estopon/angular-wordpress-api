@@ -3,13 +3,13 @@ module.exports = (formulario) => {
  var transporter = nodemailer.createTransport({
  service: "gmail",
  auth: {
- user: "tuemail@gmail.com", // Cambialo por tu email
- pass: "tupassword" // Cambialo por tu password
+ user: "pruebasangular76@gmail.com", // Cambialo por tu email
+ pass: "pru3b1s1ngul1r" // Cambialo por tu password
  }
  });
 const mailOptions = {
  from: `”${formulario.nombre} 👻” <${formulario.email}>`,
- to: "destinatario", // Cambia esta parte por el destinatario
+ to: "pruebasangular76@gmail.com", // Cambia esta parte por el destinatario
  subject: formulario.asunto,
  html: `
  <strong>Nombre:</strong> ${formulario.nombre} <br/>
