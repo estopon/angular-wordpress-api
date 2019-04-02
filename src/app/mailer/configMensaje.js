@@ -8,13 +8,13 @@ module.exports = (formulario) => {
  }
  });
 const mailOptions = {
- from: `”${formulario.nombre} 👻” <${formulario.email}>`,
+ from: `”${formulario.name} 👻” <${formulario.email}>`,
  to: "pruebasangular76@gmail.com", // Cambia esta parte por el destinatario
- subject: formulario.asunto,
+ subject: "Consulta formulario web Viajes Gala",
  html: `
- <strong>Nombre:</strong> ${formulario.nombre} <br/>
+ <strong>Nombre:</strong> ${formulario.name} <br/>
  <strong>E-mail:</strong> ${formulario.email} <br/>
- <strong>Mensaje:</strong> ${formulario.mensaje}
+ <strong>Mensaje:</strong> ${formulario.message}
  `
  };
 transporter.sendMail(mailOptions, function (err, info) {

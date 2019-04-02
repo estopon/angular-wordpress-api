@@ -1,4 +1,6 @@
+import { MessageService } from './../../services/message.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,7 @@ export class ContactComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor() { }
+  constructor(public _MessageService: MessageService) { }
 
   ngOnInit() {
   }
@@ -19,6 +21,9 @@ export class ContactComponent implements OnInit {
   processForm() {
     const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
     alert(allInfo);
+    this._MessageService.sendMessage(this).subscribe(() => {
+      Swal.fire('Formulario de contacto', 'Mensaje enviado correctamente', 'success');
+    });
   }
 
 }

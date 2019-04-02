@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { routerConfig } from './router/router.config';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     RouterModule.forRoot(routerConfig)
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
