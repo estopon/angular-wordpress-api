@@ -19,10 +19,11 @@ export class ContactComponent implements OnInit {
   }
 
   processForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
-    alert(allInfo);
-    this._MessageService.sendMessage(this).subscribe(() => {
+    const form = '{"name": "' + this.name + '","email": "' + this.email + '", "message": "' + this.message + '"}';
+    this._MessageService.sendMessage(form).subscribe(() => {
       Swal.fire('Formulario de contacto', 'Mensaje enviado correctamente', 'success');
+    }, err => {
+      Swal.fire('Formulario de contacto', 'Ha ocurrido un error en el envío: ' + err, 'error');
     });
   }
 
