@@ -9,17 +9,12 @@ import Swal from 'sweetalert2';
 })
 export class ContactComponent implements OnInit {
 
-  name: string;
-  email: string;
-  message: string;
-
   constructor(public _MessageService: MessageService) { }
 
   ngOnInit() {
   }
 
-  processForm() {
-    const form = '{"name": "' + this.name + '","email": "' + this.email + '", "message": "' + this.message + '"}';
+  processForm(form) {
     this._MessageService.sendMessage(form).subscribe(() => {
       Swal.fire('Formulario de contacto', 'Mensaje enviado correctamente', 'success');
     }, err => {
