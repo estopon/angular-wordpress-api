@@ -1,27 +1,30 @@
 <main>
   <section class="section">
     <div class="container">
-      <form (ngSubmit)="processForm(form.value)" #form=”ngForm”>
+      <form (ngSubmit)="processForm(form.value); form.reset();" #form="ngForm">
       
         <!-- name -->
         <div class=”form-group”>
           <div class="field">
-            <input type="text" name="name" class="input" placeholder="Tu Nombre" ngModel>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" class="input" placeholder="Tu Nombre" ngModel required>
           </div>
         </div>
         <!-- email -->
-        <div class=”form-group”>
+        <div class=”form-group” style="margin-top:10px">
           <div class="field">
-            <input type="email" name="email" class="input" placeholder="Tu Email" ngModel>
+            <label for="email">Email</label>
+            <input type="email" name="email" class="input" placeholder="Tu Email" ngModel required>
           </div>
         </div>
         <!-- message -->
-        <div class=”form-group”>
+        <div class=”form-group” style="margin-top:10px">
           <div class="field">
+            <label for="message">Mensaje</label>
             <textarea class="textarea" name="message" placeholder="Escribe aquí tus dudas / sugerencias" ngModel></textarea>
           </div>
         </div>
-        <button type="submit" class="button is-info is-medium">Enviar</button>
+        <button type="submit" class="button is-info is-medium" style="margin-top:10px">Enviar</button>
         
       </form>
     </div>

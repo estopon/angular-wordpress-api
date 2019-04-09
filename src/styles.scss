@@ -45,3 +45,11 @@ main {
 figure > img {
   width: 100%;
 }
+
+input.ng-touched.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
+input.ng-touched.ng-valid {
+  border-left: 5px solid #42A948; /* green */
+}
