@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { WOW } from 'wowjs/dist/wow.min';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    const wow = new WOW({
+      live: false
+    });
+    wow.init();
+  }
 }
