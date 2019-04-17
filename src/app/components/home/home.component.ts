@@ -14,9 +14,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const wow = new WOW({
-      live: false
-    });
-    wow.init();
+    new WOW({live: false}).init();
   }
 }
