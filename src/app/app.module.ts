@@ -17,6 +17,7 @@ import { routerConfig } from './router/router.config';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from './services/message.service';
+import { NgwWowModule } from 'ngx-wow';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MessageService } from './services/message.service';
     FlexModule,
     HttpClientModule,
     FormsModule,
+    NgwWowModule,
     RouterModule.forRoot(routerConfig)
   ],
   providers: [MessageService],

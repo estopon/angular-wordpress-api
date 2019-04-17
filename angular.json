@@ -32,9 +32,12 @@
               },
               "src/styles.scss",
               "node_modules/bulma/css/bulma.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/wowjs/css/libs/animate.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/wowjs/dist/wow.min.js"
+            ]
           },
           "configurations": {
             "production": {
