@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { MessageService } from './services/message.service';
 import { NgwWowModule } from 'ngx-wow';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CookieLawModule } from 'angular2-cookie-law';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     FormsModule,
     NgwWowModule,
     AngularFontAwesomeModule,
+    CookieLawModule,
     RouterModule.forRoot(routerConfig)
   ],
   providers: [MessageService],
