@@ -69,3 +69,31 @@ input.ng-touched.ng-valid {
   background: green;
   color: white;
 }
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+h1, h2, h3, h4, h5, h6{line-height: 1.2 !important;}
+
+h1 {
+	color: #dbdbdb !important; 
+	font-family: 'Ubuntu', sans-serif !important;
+	font-size: 60px !important;
+	font-weight: 700 !important;
+}
+
+h2 {
+	color: #dbdbdb !important;
+	font-family: 'Ubuntu', sans-serif !important;
+	font-size: 22px !important;
+	font-weight: 500 !important;
+}
+
+main.home .content h2
+{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
