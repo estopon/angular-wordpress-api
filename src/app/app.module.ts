@@ -18,6 +18,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from './services/message.service';
 import { NgwWowModule } from 'ngx-wow';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NgwWowModule } from 'ngx-wow';
     HttpClientModule,
     FormsModule,
     NgwWowModule,
+    AngularFontAwesomeModule,
     RouterModule.forRoot(routerConfig)
   ],
   providers: [MessageService],
