@@ -1,4 +1,21 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://www.viajesgala.es/">
+      <img src="assets/images/logo_gala.png" width="112" height="28">
+    </a>
+  </div>
+  <div class="navbar-menu is-active">
+    <!-- navbar start, navbar end -->
+    <div class="navbar-start">
+      <a class="navbar-item is-tab" routerLink="home">Home</a>
+      <a class="navbar-item is-tab" routerLink="about">Sobre Nosotros</a>
+      <a class="navbar-item is-tab" routerLink="categories">Categorías</a>
+      <a class="navbar-item is-tab" routerLink="contact">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<!--<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
   <div class="container">
       <a class="navbar-brand">Viajes Gala</a>
       <ul class="nav navbar-nav" routerLinkActive="active">
@@ -8,7 +25,7 @@
           <li class="nav-item"><a class="nav-link" routerLink="contact">Contacto</a></li>
       </ul>
   </div>
-</nav>
+</nav>-->
 
 <router-outlet></router-outlet>
 
