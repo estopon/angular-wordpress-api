@@ -94,3 +94,13 @@ main.home .content h2
 	padding-top: 20px;
 	padding-bottom: 40px;
 }
+
+a.navbar-item
+{
+  text-decoration: none !important;
+  background-color: transparent !important;
+}
+
+.navbar-dropdown {
+  background-color: #4a4a4a !important;
+}
