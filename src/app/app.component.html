@@ -13,7 +13,7 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link is-arrowless">Categorías</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item">Cruceros</a>
+          <a class="navbar-item" (click)="navigate(category.name)" *ngFor="let category of categories$ | async">{{ category.name }}</a>
         </div>
       </div>
       <a class="navbar-item is-tab" routerLink="contact">Contacto</a>
