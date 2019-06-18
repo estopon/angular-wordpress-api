@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   navigate() {
-    this.router.navigate(['/', 'categories']).then(
+    this.router.navigate(['/', 'about']).then(
       nav => {
-        window.location.reload();
+        // window.location.reload();
       }, err => {
         console.log(err);
       }

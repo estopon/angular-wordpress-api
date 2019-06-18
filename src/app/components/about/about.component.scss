@@ -1,0 +1,78 @@
+.main{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fondo_home {
+	background-image: url(/assets/images/fondo_home.jpg);
+}
+
+.etapas i
+{
+	font-size: 60px;
+	color: #6E6E6E; /*#9554a1;*/
+}
+.etapas .columna05 i
+{
+	font-size: 50px;
+	color: #ddd;
+}
+
+.fila{display: flex; flex-flow: row wrap; justify-content: flex-start; align-content: flex-start;}
+.fila.center{justify-content: center;}
+.fila.right{justify-content: flex-end;}
+.fila.centervertical{align-content: center;}
+.fila.bottom{align-content: flex-end;}
+
+.fila > .columna10{width: 100%;}
+.fila > .columna9{width: 90%;}
+.fila > .columna8{width: 80%;}
+.fila > .columna7{width: 70%;}
+.fila > .columna6{width: 60%;}
+.fila > .columna5{width: 50%;}
+.fila > .columna4{width: 40%;}
+.fila > .columna33{width: 33.33%;}
+.fila > .columna66{width: 66.66%;}
+.fila > .columna3{width: 30%;}
+.fila > .columna2new{width: 45%;}
+.fila > .columna25{width: 25%;}
+.fila > .columna2{width: 20%;}
+.fila > .columna15{width: 15%;}
+.fila > .columna1{width: 10%;}
+.fila > .columna05{width: 5%;}
+.fila > .vacenter{align-self: center;}	
+
+.pdd80{padding: 80px;}
+.pdd80-15{padding: 80px 15px;}
+.pdd80-30{padding: 80px 30px;}
+
+.pdd15{padding: 15px;}
+
+.pdd-no-top{padding-top: 0;}
+
+.tacenter{text-align: center;}
+
+span.desc
+{
+	color: #585858; 
+	/*color: #888;*/
+	font-size: 17px;
+	margin-bottom: 20px;
+	display: block;
+	line-height: 25px;
+}
+
+.nosotros_home .foto1{background-image: url('/assets/images/nosotros_1.jpg');}
+.nosotros_home .foto2{background-image: url('/assets/images/nosotros_2.jpg');}
+.nosotros_home .foto3{background-image: url('/assets/images/nosotros_3.jpg');}
+.nosotros_home .foto4{background-image: url('/assets/images/nosotros_4.jpg');}
+.nosotros_home .foto5{background-image: url('/assets/images/nosotros_5.jpg');}
+.nosotros_home .foto7{background-image: url('/assets/images/nosotros_7.jpg');}
+.nosotros_home .num 
+{
+    font-size: 14px;
+    color: #585858; /*#666;*/
+} 
+
+.bg{background-repeat: no-repeat; background-position: center; background-size: cover;}
