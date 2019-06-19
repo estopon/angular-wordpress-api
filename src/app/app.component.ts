@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs';
 import { WordpressService } from './services/wordpress.service';
@@ -13,7 +13,12 @@ export class AppComponent {
 
   categories$: Observable<any[]>;
 
-  constructor(private wp: WordpressService, private router: Router, private route: ActivatedRoute) {
+  @ViewChild('burger') burger: ElementRef;
+  @ViewChild('menu') menu: ElementRef;
+
+  isopen = false;
+
+  constructor(private wp: WordpressService, private router: Router, private route: ActivatedRoute, private renderer: Renderer2) {
     this.categories$ = this.wp.getCategories().map(
       (res: any) => res.categories
     );
@@ -27,6 +32,18 @@ export class AppComponent {
         console.log(err);
       }
     );
+  }
+
+  burgerClick() {
+    if (!this.isopen) {
+      this.renderer.addClass(this.burger.nativeElement, 'is-active');
+      this.renderer.addClass(this.menu.nativeElement, 'is-active');
+      this.isopen = true;
+    } else {
+      this.renderer.removeClass(this.burger.nativeElement, 'is-active');
+      this.renderer.removeClass(this.menu.nativeElement, 'is-active');
+      this.isopen = false;
+    }
   }
 
 }
